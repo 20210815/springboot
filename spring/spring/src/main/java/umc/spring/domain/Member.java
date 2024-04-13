@@ -20,6 +20,7 @@ import java.util.List;
 
 @Entity
 @Getter
+@Setter
 @DynamicUpdate //null인 경우 쿼리를 그냥 보내지 않도록 함.
 @DynamicInsert
 @Builder
