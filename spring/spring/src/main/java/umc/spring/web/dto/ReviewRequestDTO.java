@@ -11,5 +11,6 @@ public class ReviewRequestDTO {
         Float score;
         String body;
         Long memberId;
+        Long storeId;
     }
 }
