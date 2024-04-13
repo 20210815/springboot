@@ -7,6 +7,7 @@ import umc.spring.converter.ReviewConverter;
 import umc.spring.domain.Review;
 import umc.spring.repository.MemberRepository;
 import umc.spring.repository.ReviewRepository;
+import umc.spring.repository.StoreRepository;
 import umc.spring.web.dto.ReviewRequestDTO;
 
 @Service
@@ -16,12 +17,15 @@ public class ReviewCommandServiceImpl implements ReviewCommandService{
 
     private final MemberRepository memberRepository;
     private final ReviewRepository reviewRepository;
+    private final StoreRepository storeRepository;
     @Override
     @Transactional
     public Review createReview(ReviewRequestDTO.CreateReviewDTO request) {
         Review review = ReviewConverter.toCreateReview(request);
         review.setMember(memberRepository.findById(request.getMemberId()).get());
+        review.setStore(storeRepository.findById(request.getStoreId()).get());
         reviewRepository.save(review);
+
         //System.out.println(review.getMember().getReviewList());
         return review;
     }
