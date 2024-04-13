@@ -6,6 +6,7 @@ import umc.spring.domain.common.BaseEntity;
 
 @Entity
 @Getter
+@Setter
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
@@ -18,6 +19,8 @@ public class Review extends BaseEntity {
     private String title;
 
     private Float score;
+
+    private String body;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
