@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="43.202.183.196" id="f9db4b3b-36c5-44a8-ad34-e0df09061e08" keyPath="C:\Users\kyumi\Downloads\chiwawa.pem" port="22" nameFormat="DESCRIPTIVE" username="ubuntu" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>

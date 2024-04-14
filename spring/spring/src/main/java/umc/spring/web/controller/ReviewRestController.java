@@ -49,3 +49,10 @@ public class ReviewRestController {
         return ApiResponse.onSuccess(storeQueryService.getReviewDtoList(storeQueryService.getReviewList(storeId,page)));
     }
 }
+
+
+
+
+
+
+
