@@ -21,11 +21,11 @@ jobs:
           distribution: 'adopt'
 
       - name: Grant execute permission for gradlew
-        run: chmod +x ./spring/gradlew
+        run: chmod +x ./gradlew
         shell: bash #(6).권한 부여
 
       - name: Build with Gradle
-        run: ./spring/gradlew clean build -x test
+        run: ./gradlew clean build -x test
         shell: bash #7
 
       - name: Get current time
@@ -51,11 +51,11 @@ jobs:
       - name: Beanstalk Deploy
         uses: einaregilsson/beanstalk-deploy@v20
         with:
-          aws_access_key: ${{ secrets.AWS_ACTION_ACCESS_KEY_ID }}
-          aws_secret_key: ${{ secrets.AWS_ACTION_SECRET_ACCESS_KEY }}
+          aws_access_key: ${{ AKIA4MTWL5VTXWJ3JDOR }}
+          aws_secret_key: ${{ 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 }}
           application_name: breifing-dev
           environment_name: Breifing-dev-env
           version_label: github-action-${{ steps.current-time.outputs.formattedTime }}
-          region: ap-northeast-1
+          region: ap-northeast-2
           deployment_package: deploy/deploy.zip
           wait_for_deployment: false
