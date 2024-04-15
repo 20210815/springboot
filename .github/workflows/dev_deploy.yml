@@ -27,7 +27,7 @@ jobs:
       - name: Build with Gradle
         run: ./spring/gradlew clean build -x test
         shell: bash
-        working-directory: ../../../../springboot/spring
+        working-directory: spring/
          
 
       - name: Get current time
