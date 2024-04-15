@@ -26,7 +26,7 @@ jobs:
 
       - name: Build with Gradle
         run: ./spring/gradlew clean build -x test
-        shell: bash #(7).build시작
+        shell: bash
         with:
           arguments: build
           build-root-directory: ./spring/gradlew
