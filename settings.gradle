@@ -1,1 +1,1 @@
-rootProject.name = 'springboot:spring'
+rootProject.name = include(['springboot:spring'])
