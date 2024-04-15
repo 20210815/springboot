@@ -29,7 +29,7 @@ jobs:
         shell: bash #(7).build시작
         with:
           arguments: build
-          build-root-directory: ./spring
+          build-root-directory: ./spring/gradlew
 
   
          
