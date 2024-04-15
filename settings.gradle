@@ -1,1 +1,1 @@
-include(['springboot:spring'])
+rootProject.name = 'springboot'
